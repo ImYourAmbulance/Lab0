@@ -16,7 +16,12 @@ function calculateIntegral(func, start, end) {
     return result;
 }
 
-const start = Number(window.prompt("start", ""));
-const end = Number(window.prompt("end", ""));
 
-console.log(calculateIntegral(givenFunction, start, end))
+alert("Let's integrate!")
+
+const start = Number(window.prompt("Integrate from", ""));
+const end = Number(window.prompt("Integrate to", ""));
+
+let result = calculateIntegral(givenFunction, start, end);
+
+alert(`The result of integrating the following function: \nf(x) = x/16 + 4 * sin(x) - 3 \nin range [${start}, ${end}] is ${result}`);
